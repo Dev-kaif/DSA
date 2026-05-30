@@ -11,7 +11,7 @@ int main()
 
     while (high < arr.size())
     {
-
+        
         if (arr[high] == arr[high - 1])
         {
             high++;
