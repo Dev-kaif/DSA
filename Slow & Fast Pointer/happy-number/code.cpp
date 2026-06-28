@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// https://leetcode.com/problems/happy-number/description/
+
 int digitSquareSum(int n)
 {
     int sum = 0;
