@@ -1,7 +1,13 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-int main(){
-    
+class Solution
+{
+public:
+};
+
+int main()
+{
+    Solution S;
 }

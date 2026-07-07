@@ -7,3 +7,4 @@
 5. Prefix Sum
 6. Merge Intervals
 7. Stack
+8. Hash map
