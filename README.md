@@ -8,3 +8,4 @@
 6. Merge Intervals
 7. Stack
 8. Hash map
+9. In-place Reversal of a LinkedList
