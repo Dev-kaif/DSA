@@ -13,7 +13,7 @@ public:
         int low = 0;
         int high = size - 1;
 
-        while (low < high)
+        while (low <= high)
         {
             int mid = low + (high - low) / 2;
             int guess = nums[mid];
@@ -60,7 +60,7 @@ public:
                     {
                         // Target is also in Part 2 and is smaller than guess.
                         // Search left.
-                        high = mid;
+                        high = mid - 1;
                     }
                 }
             }
@@ -73,7 +73,7 @@ public:
                 {
                     // Both are in Part 1.
                     // Search left.
-                    high = mid;
+                    high = mid - 1;
                 }
                 else
                 {
@@ -89,16 +89,10 @@ public:
                         // Target belongs to Part 2.
                         // It cannot lie to the right of a Part 1 element.
                         // Move into Part 2.
-                        high = mid;
+                        high = mid - 1;
                     }
                 }
             }
-        }
-
-        // Only one candidate remains.
-        if (nums[high] == target)
-        {
-            return high;
         }
 
         return -1;

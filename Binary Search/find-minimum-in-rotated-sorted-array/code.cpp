@@ -12,33 +12,44 @@ public:
         int low = 0;
         int high = nums.size() - 1;
 
-        while (low < high)
+        // Stores the smallest value seen so far.
+        int ans = INT_MAX;
+
+        while (low <= high)
         {
             int mid = low + (high - low) / 2;
 
-            // already sorted
+            // If the current search range is already sorted,
+            // then nums[low] is the minimum of this range.
             if (nums[low] <= nums[high])
             {
-                return nums[low];
+                ans = min(ans, nums[low]);
+                break;
             }
 
-            // mid is part of part-2
+            // Save the current middle element because
+            // it could be the minimum.
+            ans = min(ans, nums[mid]);
+
+            // Decide which half to discard.
+
+            // nums[mid] > nums[high] means mid lies in the
+            // left (larger) portion of the rotated array.
+            
+            // Therefore, the minimum must be on the right.
             if (nums[mid] > nums[high])
             {
                 low = mid + 1;
             }
             else
             {
-                // mid is part of part-1
-
-                // keep mid in search radius
-                // bcz mid can be actual ans
-                high = mid;
+                // Mid lies in the right (smaller) portion.
+                // The minimum could be to the left of mid.
+                high = mid - 1;
             }
         }
 
-        // high = low at the end
-        return nums[high];
+        return ans;
     }
 };
 

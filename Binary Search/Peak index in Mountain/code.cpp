@@ -25,15 +25,13 @@ public:
             }
             else
             {
-
-                // if next element is greater than mid than peak element cant be
-                // mid
-
+                // if next element is greater than mid than peak element cant mid
                 // and it will be in right side so update the low
                 low = mid + 1;
             }
         }
 
+        // low == high
         return high;
     }
 };
