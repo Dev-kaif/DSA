@@ -10,3 +10,4 @@
 8.  Hash map
 9.  In-place Reversal of a LinkedList
 10. Binary Search
+11. Heap
