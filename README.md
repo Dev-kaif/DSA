@@ -11,3 +11,5 @@
 9.  In-place Reversal of a LinkedList
 10. Binary Search
 11. Heap
+12. Recursion
+13. Tree
