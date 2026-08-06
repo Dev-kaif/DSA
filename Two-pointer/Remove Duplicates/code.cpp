@@ -24,10 +24,10 @@ int main()
         }
     }
 
-    for (int i = 0; i < arr.size(); i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-    cout << "unique: " << low << endl;
+    // for (int i = 0; i < arr.size(); i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    // cout << endl;
+    // cout << "unique: " << low << endl;
 }
